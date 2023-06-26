@@ -1,0 +1,5 @@
+alias py='python3'
+alias py11='python3.11'
+alias la='ls -a'
+alias aenv='source ./.env'
+alias avenv='source ./venv/bin/activate'
