@@ -84,7 +84,7 @@ prompt_k8s() {
 }
 
 NEWLINE=$'\n'
-PROMPT='%F{green}%n%f %F{yellow}%~%f ${PROMPT_CONDA_ENV}${PROMPT_NODE}${PROMPT_K8S_CTX}${PROMPT_GIT_INFO}${NEWLINE}%# '
+PROMPT='%F{blue}%n%f %F{green}%~%f ${PROMPT_CONDA_ENV}${PROMPT_NODE}${PROMPT_K8S_CTX}${PROMPT_GIT_INFO}${NEWLINE}%# '
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
