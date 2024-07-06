@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Source folder path
-source_folder="./files"
+SOURCE_FOLDER="./dotfiles"
 
 # Destination folder path
-destination_folder=$HOME
+DESTINATION_FOLDER=$HOME
 
 # Copy files from source folder to destination folder
-cp -r "$source_folder" "$destination_folder"
+cp -r "$SOURCE_FOLDER" "$DESTINATION_FOLDER"
 
 # Print success message
-echo "Files copied successfully!"
+echo "Dotfiles copied successfully!"
