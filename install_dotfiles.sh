@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 # Source folder path
 SOURCE_FOLDER="./dotfiles"
 
