@@ -5,3 +5,4 @@ alias ll='ls -alh'
 alias aenv='source ./.env'
 alias avenv='source .venv/bin/activate'
 alias zh="cat ~/.zsh_history"
+alias zhg="cat ~/.zsh_history | grep"
