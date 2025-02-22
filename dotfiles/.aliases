@@ -15,6 +15,7 @@ alias daenv='source ./.env.drod'
 alias m='make'
 alias mc='make clean'
 alias ma='make all'
+alias mb='make build'
 
 # Shell
 alias la='ls -ah'
