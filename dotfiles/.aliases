@@ -1,8 +1,25 @@
+#Python
 alias py='python3'
 alias py11='python3.11'
+alias py13='python3.13'
+alias avenv='source .venv/bin/activate'
+
+# Environments
+alias aenv='source ./.env'
+alias penv='source ./.env.prod'
+alias denv='source ./.env.drod'
+alias paenv='source ./.env.prod'
+alias daenv='source ./.env.drod'
+
+# Make
+alias m='make'
+alias mc='make clean'
+alias ma='make all'
+
+# Shell
 alias la='ls -ah'
 alias ll='ls -alh'
-alias aenv='source ./.env'
-alias avenv='source .venv/bin/activate'
 alias zh="cat ~/.zsh_history"
 alias zhg="cat ~/.zsh_history | grep"
+alias pwg="pwgen -s -y"
+alias sudo="please"
