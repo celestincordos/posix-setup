@@ -8,7 +8,7 @@ SOURCE_FOLDER="./dotfiles"
 DESTINATION_FOLDER=$HOME
 
 # Copy files from source folder to destination folder
-cp -r "$SOURCE_FOLDER" "$DESTINATION_FOLDER"
+cp -r dotfiles/.* "$DESTINATION_FOLDER"
 
 # Print success message
 echo "Dotfiles copied successfully!"
