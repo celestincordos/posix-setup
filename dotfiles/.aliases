@@ -1,3 +1,26 @@
+export_file_vars() {
+    local file="$1"
+
+    # Check if the file exists
+    if [[ ! -f "$file" ]]; then
+        echo "Error: File '$file' not found."
+        return 1
+    fi
+
+    # Read each line and export it
+    while IFS= read -r line || [[ -n "$line" ]]; do
+        # Ignore empty lines and comments
+        [[ -z "$line" || "$line" =~ ^# ]] && continue
+
+        # Extract key and value
+        key=$(echo "$line" | cut -d= -f1)
+        value=$(echo "$line" | cut -d= -f2-)
+
+        # Export variable
+        export "$key=$value"
+    done < "$file"
+}
+
 #Python
 alias py='python3'
 alias py11='python3.11'
@@ -6,10 +29,10 @@ alias avenv='source .venv/bin/activate'
 
 # Environments
 alias aenv='source ./.env'
-alias penv='source ./.env.prod'
-alias denv='source ./.env.drod'
+alias penv='export_file_vars ./.env.prod'
+alias denv='export_file_vars ./.env.dev'
 alias paenv='source ./.env.prod'
-alias daenv='source ./.env.drod'
+alias daenv='source ./.env.dev'
 
 # Make
 alias m='make'
@@ -23,4 +46,4 @@ alias ll='ls -alh'
 alias zh="cat ~/.zsh_history"
 alias zhg="cat ~/.zsh_history | grep"
 alias pwg="pwgen -s -y"
-alias sudo="please"
+alias please="sudo"
