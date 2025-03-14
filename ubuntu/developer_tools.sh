@@ -5,9 +5,9 @@ sudo snap install android-studio --classic
 sudo snap install flutter --classic
 flutter doctor
 
-# Spaceship
+# Starship
 mkdir -p "$HOME/.zsh"
-git clone --depth=1 https://github.com/spaceship-prompt/spaceship-prompt.git "$HOME/.zsh/spaceship"
+curl -sS https://starship.rs/install.sh | sh -s -- -y
 
 # PDM
 curl -sSLO https://pdm-project.org/install-pdm.py
