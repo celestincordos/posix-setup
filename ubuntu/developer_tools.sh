@@ -9,11 +9,8 @@ flutter doctor
 mkdir -p "$HOME/.zsh"
 curl -sS https://starship.rs/install.sh | sh -s -- -y
 
-# PDM
-curl -sSLO https://pdm-project.org/install-pdm.py
-curl -sSL https://pdm-project.org/install-pdm.py.sha256 | shasum -a 256 -c -
-# Run the installer
-python3 install-pdm.py
+
+
 
 # NVM
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
