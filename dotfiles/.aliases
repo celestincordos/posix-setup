@@ -26,6 +26,10 @@ alias py='python3'
 alias py11='python3.11'
 alias py13='python3.13'
 alias avenv='source .venv/bin/activate'
+alias pm='python manage.py'
+alias pmr='python manage.py runserver'
+alias pmmm='python manage.py makemigrations'
+alias pmm='python manage.py migrate'
 
 # Environments
 alias aenv='export_file_vars ./.env'
