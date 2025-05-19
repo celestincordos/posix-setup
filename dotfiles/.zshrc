@@ -24,4 +24,4 @@ source ~/.profile
 export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
 eval "$(starship init zsh)"
 
-export PATH="$PATH:$HOME/snap/flutter/common/flutter/bin"
+export PATH="$PATH:$HOME/snap/flutter/common/flutter/bin:$HOME/development/flutter/bin"
