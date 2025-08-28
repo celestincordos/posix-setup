@@ -44,6 +44,7 @@ alias m='make'
 alias mc='make clean'
 alias ma='make all'
 alias mb='make build'
+alias mr='make run'
 
 # Shell
 alias la='ls -ah'
