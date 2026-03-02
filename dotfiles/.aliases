@@ -35,7 +35,7 @@ alias pmm='python manage.py migrate'
 alias aenv='export_file_vars ./.env'
 alias penv='export_file_vars ./.env.prod'
 alias denv='export_file_vars ./.env.dev'
-alias ppenv='export_file_vars ./.env.dev'
+alias ppenv='export_file_vars ./.env.ppr'
 alias paenv='source ./.env.prod'
 alias daenv='source ./.env.dev'
 alias aaenv='source ./.env'
@@ -54,3 +54,14 @@ alias zh="cat ~/.zsh_history"
 alias zhg="cat ~/.zsh_history | grep"
 alias pwg="pwgen -s -y"
 alias please="sudo"
+
+# Git
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit'
+alias gp='git push'
+alias gpl='git pull'
+alias gco='git checkout'
+alias gb='git branch'
+alias gcb='git checkout -b'
+alias gac='git add . && git commit -m'
