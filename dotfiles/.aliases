@@ -19,6 +19,8 @@ export_file_vars() {
         # Export variable
         export "$key=$value"
     done < "$file"
+
+    export ENVIRONNEMENT_FILE="$file"
 }
 
 #Python

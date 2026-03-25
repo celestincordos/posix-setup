@@ -12,6 +12,7 @@ $aws\
 $docker_context\
 $jobs\
 $cmd_duration\
+${env_var.ENVIRONNEMENT_FILE}\
 $line_break\
 $character"""
 
@@ -100,6 +101,10 @@ only_with_files = true
 min_time = 500
 # style = 'gray'
 format = '[$duration]($style)'
+
+[env_var.ENVIRONNEMENT_FILE]
+format = '[$env_value]($style) '
+style = 'green'
 
 [palettes.nord]
 dark_blue = '#5E81AC'
