@@ -6,9 +6,6 @@ sudo snap install flutter --classic
 flutter doctor
 
 
-# Starship
-mkdir -p "$HOME/.zsh"
-curl -sS https://starship.rs/install.sh | sh -s -- -y
 
 # PGADMIN
 # Install the public key for the repository (if not done previously):
