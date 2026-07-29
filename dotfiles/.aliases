@@ -23,6 +23,21 @@ export_file_vars() {
     export ENVIRONNEMENT_FILE="$file"
 }
 
+d() {
+    if [[ "$#" -eq 0 ]]; then
+        echo "Usage: d command [args...]"
+        return 2
+    fi
+
+    local log_file="${TMPDIR:-/tmp}/detached-$(date +%Y%m%d-%H%M%S).log"
+    nohup "$@" > "$log_file" 2>&1 < /dev/null &
+    local pid=$!
+    disown "$pid" 2>/dev/null || true
+
+    echo "Detached PID $pid; log: $log_file"
+}
+alias reload='source ~/.zshrc'
+
 #Python
 alias py='python3'
 alias py11='python3.11'
@@ -49,6 +64,8 @@ alias mc='make clean'
 alias ma='make all'
 alias mb='make build'
 alias mr='make run'
+alias mmu='make migrate-up'
+alias mmd='make migrate down'
 
 # Shell
 alias la='ls -ah'
@@ -63,8 +80,11 @@ alias gs='git status'
 alias ga='git add'
 alias gc='git commit'
 alias gp='git push'
+alias gpsu='git push --set-upstream'
+alias gpsuo='git push --set-upstream origin'
 alias gpl='git pull'
 alias gco='git checkout'
 alias gb='git branch'
 alias gcb='git checkout -b'
 alias gac='git add . && git commit -m'
+alias gbs='git sitch -c'
